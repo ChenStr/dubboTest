@@ -1,0 +1,40 @@
+#spring.application.name=consumers
+#server.port=8001
+#
+#
+#dubbo.application.name=consumers
+#
+#
+#demo.service.version=1.0.0
+#
+##dubbo.protocol.name=dubbo
+##dubbo.protocol.port=20880
+#
+#dubbo.registry.address=zookeeper://127.0.0.1:2181
+#
+##provider����
+##dubbo.provider.timeout=1000
+
+spring:
+  application:
+    # 项目名称
+    name: consumers
+
+server:
+  port: 8001
+
+dubbo:
+  application:
+    # dubbo 里的项目名称，尽量与项目名称一致
+    name: consumers
+  protocol:
+    name: dubbo
+    port: 20880
+  # zookeeper 地址
+  registry:
+    address: zookeeper://127.0.0.1:2181
+
+# 自定义属性设置
+demo:
+  service:
+    version: 1.0.0

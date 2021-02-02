@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: producers2
+
+server:
+  port: 8003
+
+dubbo:
+  # 项目名称
+  application:
+    name: producers2
+  # dubbo 集群
+  protocol:
+    name: dubbo
+    port: 20882
+  registry:
+    # zookeeper 地址
+    address: zookeeper://127.0.0.1:2181
+  provider:
+    timeout: 1000
+
+# 自定义属性
+demo:
+  service:
+    version: 1.0.0

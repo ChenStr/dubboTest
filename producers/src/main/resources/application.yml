@@ -1,0 +1,44 @@
+spring:
+  application:
+    name: producers
+#  dubbo:
+#    service:
+#      cluster: Failsafe
+
+server:
+  port: 8000
+
+dubbo:
+  # 项目名称
+  application:
+    name: producers
+  protocol:
+    name: dubbo
+    port: 20880
+  registry:
+  # zookeeper 地址
+    address: zookeeper://127.0.0.1:2181
+  provider:
+    timeout: 1000
+
+# 自定义属性
+demo:
+  service:
+    version: 1.0.0
+
+#spring.application.name=producers
+#server.port=8000
+#
+## 项目名称
+#dubbo.application.name=producers
+#
+## 自定义属性
+#demo.service.version=1.0.0
+#
+#dubbo.protocol.name=dubbo
+#dubbo.protocol.port=20880
+#
+#dubbo.registry.address=zookeeper://127.0.0.1:2181
+#
+## 超时时间
+#dubbo.provider.timeout=1000
